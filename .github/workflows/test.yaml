@@ -1,13 +1,31 @@
-name: Mon Premier Workflow
- 
+name: CI/CD Workflow
+
 on:
   push:
- 
+    branches:
+      - main  # Le workflow s'exécute lorsque du code est poussé sur la branche "main"
+
 jobs:
   build:
-    runs-on: ubuntu-latest
- 
+    runs-on: ubuntu-latest  # Utilise une machine virtuelle Ubuntu pour exécuter les étapes
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Print Hello World
-        run: echo "Hello shrimps"
+      - name: Vérifier le code
+        uses: actions/checkout@v2  # Récupère le code du dépôt
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v2  # Installe Node.js
+        with:
+          node-version: '14'  # Spécifie la version de Node.js à utiliser
+
+      - name: Installer les dépendances
+        run: npm install  # Exécute la commande pour installer les dépendances
+
+      - name: Exécuter les tests
+        run: npm test  # Exécute les tests définis dans le projet
+
+      - name: Déployer l'application
+        run: |
+          echo "Déploiement de l'application..."
+          # Ici, vous pourriez ajouter des commandes pour déployer l'application, par exemple :
+          # npm run deploy
