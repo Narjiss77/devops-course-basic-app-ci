@@ -1,6 +1,6 @@
 name: Mon Premier Workflow
  
- on:
+on:
   push:
  
 jobs:
