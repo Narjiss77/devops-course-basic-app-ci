@@ -25,7 +25,7 @@ jobs:
         run: npm test  # Exécute les tests définis dans le projet
 
       - name: Déployer l'application
-        run: |
+        run:|
           echo "Déploiement de l'application..."
           # Ici, vous pourriez ajouter des commandes pour déployer l'application, par exemple :
           # npm run deploy
