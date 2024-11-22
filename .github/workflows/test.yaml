@@ -26,6 +26,6 @@ jobs:
 
       - name: Déployer l'application
         run:|
-          echo "Déploiement de l'application..."
+          echo "Déploiement deeee l'application..."
           npm run deploy  # Commande pour déployer l'application
 
