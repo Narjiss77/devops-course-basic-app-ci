@@ -1,8 +1,6 @@
 name: Mon Premier Workflow
  
-name: Mon Premier Workflow
- 
-on:
+ on:
   push:
  
 jobs:
